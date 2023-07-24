@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="dr.love">
+	<main>
+    <div class="container">
+      <p>
+        <img src="inbetween.png" width="400" height="300"/>
+      </p>
+			<div>
+        <h1><span class="text-gradient">dr.love</span></h1>
+        <p class="intro"><span class="dark">Bite Into It</span><span>*</span>
+			<span class="dark"></span>
+				<span></span></p>
+      </div>
+    </div>
+		<p class="instructions">
+			<code>Simple</code>
+    </p>
+		<ul role="list" class="link-card-grid">
+			<!-- <Card
+				href="https://arxiv.org/abs/2305.14387"
+				title="Research Resources"
+				body="Following LLM research"
+			/>
+			<Card
+				href="https://www.articulatepython.com/blog/finetune-openai-models"
+				title="Python Integrations"
+				body="Generic Fine Tuning"
+			/>
+      <Card
+				href="https://ocw.mit.edu/search/?q=Artificial Intelligence&t=Artificial Intelligence"
+				title="Self Study"
+				body="MIT Open Courseware on AI"
+			/>
+			<Card
+				href="https://python.langchain.com/docs/get_started/introduction"
+				title="LangChain"
+				body="Back on the Chain Gang"
+			/>
+      <Card
+        href="https://www.youtube.com/playlist?list=PLCpMvp7ftsnIbNwRnQJbDNRqO6qiN3EyH"
+        title="Deep Creativity"
+        body="Small Corner of The Tube"
+      />
+      <Card
+        href="https://huggingface.co/"
+        title="Hugging Face"
+        body="All the Hottest Models"
+      /> -->
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+  .container {
+    display: flex;
+    align-items: flex-start;
+  }
+  .container p,
+  .container div {
+    margin: 0;
+  }
+  .container p {
+    margin-right: 20px;
+  }
+  .intro {
+    padding-top: 6px;
+    font-size: 1em;
+    color: rgba(var(--accent), 80%)
+  }
+  .intro span {
+    display: block;
+    margin-bottom: 6px;
+    text-align: justify;
+  }
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+    text-align: end;
+	}
+  img {
+    line-height: 1.6;
+		margin: 0 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: .4rem;
+		border-radius: 0.4rem;
+    text-align: center;
+    opacity: .8;
+  }
+  .dark {
+    color: darkslateblue;
+  }
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+    text-align: center;
+	}
+	.instructions code {
+		/* font-size: 0.875em; */
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+    margin: auto;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  } 
+</style>
