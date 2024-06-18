@@ -1,4 +1,4 @@
-/* import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config';
 
 import cloudflare from "@astrojs/cloudflare";
 
@@ -6,11 +6,14 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   output: "server",
   adapter: cloudflare()
-}); */
+});
+
+/* 
+setup fir github pages
 
 import { defineConfig } from 'astro/config'
 
 export default defineConfig({
   site: 'https://rayhunter.github.io',
   base: 'drlove',
-})
+}) */
